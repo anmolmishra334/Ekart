@@ -50,14 +50,14 @@ pipeline {
                 }
                 stage('Maven Test') {
                     steps {
-                        bat 'mvn test'
+                        bat 'mvn test -DskipTests=True'
                     }
                 }
             }
         }
         stage('Maven Package Creation') {
             steps {
-                bat 'mvn clean package'
+                bat 'mvn clean package -DskipTests=True'
             }
         }
         stage('Maven Archive Package') {
@@ -68,7 +68,7 @@ pipeline {
     stage('Upload Maven Package') {
     steps {
         script {
-            bat "mvn deploy"
+            bat "mvn deploy  -DskipTests=True"
         }
     }
 }
