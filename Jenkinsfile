@@ -54,17 +54,17 @@ pipeline {
                     }
                 }
             }
-        } /*
+        } 
         stage('Maven Package Creation') {
             steps {
                 bat 'mvn clean package -DskipTests=True'
             }
-        } */
+        } /*
         stage('Maven Archive Package') {
             steps {
                 archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
             }
-        } 
+        } */
     stage('Upload Maven Package') {
     steps {
         script {
