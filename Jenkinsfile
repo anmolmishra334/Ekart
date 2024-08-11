@@ -9,7 +9,7 @@ pipeline {
         DOCKER_CREDENTIALS_ID = 'docker_cred'
         KUBERNETES_CONTEXT = 'minikube'
         IMAGE_TAG = "${env.BUILD_ID}"
-        GIT_CREDENTIALS_ID = 'github_secret_text_for_webhook'
+        GIT_CREDENTIALS_ID = 'git-cred'
     }
     tools {
         jdk 'JDK'
