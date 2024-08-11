@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/anmolmishra334/Petclinic.git'
+                git branch: 'main', url: 'https://github.com/anmolmishra334/Ekart.git'
             }
         }
  stage('Update Maven Version') {
